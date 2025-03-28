@@ -7,11 +7,12 @@ public class GameManager : MonoBehaviour
     public AudioSource theMusic;
     public bool startPlaying;
     public BeatScroller theBS;
+    public static GameManager instance;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        instance = this;        
     }
 
     // Update is called once per frame
@@ -28,5 +29,14 @@ public class GameManager : MonoBehaviour
             }
         }
         
+    }
+
+    public void NoteHit()
+    {
+        Debug.Log("Note hit :3");
+    }
+    public void NoteMissed()
+    {
+        Debug.Log("note MISSED </3");
     }
 }

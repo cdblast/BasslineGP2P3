@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e67011cbb3dad4ebbd56afced8cc44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beatTempo: 180
+  beatTempo: 126.4
   hasStarted: 0
 --- !u!4 &10132383
 Transform:
