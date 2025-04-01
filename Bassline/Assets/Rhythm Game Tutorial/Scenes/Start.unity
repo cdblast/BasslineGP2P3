@@ -1936,6 +1936,8 @@ MonoBehaviour:
   theBS: {fileID: 10132382}
   currentScore: 0
   scorePerNote: 100
+  scorePerGoodNote: 125
+  scorePerPerfectNote: 150
   currentMultiplier: 1
   multiplierTracker: 0
   multiplierThresholds: 040000000c0000001c000000

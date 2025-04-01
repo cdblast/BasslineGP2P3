@@ -23,7 +23,12 @@ public class NoteObject : MonoBehaviour
             {
                 gameObject.SetActive(false);
 
-                GameManager.instance.NoteHit();
+                //GameManager.instance.NoteHit();
+
+                if(Mathf.Abs(transform.position.y) > 0.25)
+                {
+                    GameManager.instance.NormalHit();
+                }
             }
         }
     }
