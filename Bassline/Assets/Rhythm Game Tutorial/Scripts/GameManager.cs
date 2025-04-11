@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (!theMusic.isPlaying && resultsScreen.activeInHierarchy)
+            if (!theMusic.isPlaying && !resultsScreen.activeInHierarchy)
             {
                 resultsScreen.SetActive(true);
 
@@ -76,16 +76,16 @@ public class GameManager : MonoBehaviour
                 if (percentHit > 55)
                 {
                     rankVal = "D";
-                    if (percentHit < 60)
+                    if (percentHit > 60)
                     {
                         rankVal = "C";
-                        if(percentHit >70)
+                        if(percentHit > 70)
                         {
                             rankVal = "B";
-                            if(percentHit <80)
+                            if(percentHit > 80)
                             {  
                                 rankVal = "A";
-                                if(percentHit >90)
+                                if(percentHit > 90)
                                 {
                                     rankVal = "S";
                                 }

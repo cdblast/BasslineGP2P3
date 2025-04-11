@@ -5,6 +5,7 @@ using UnityEngine;
 public class NoteObject : MonoBehaviour
 {
     public bool canBePressed;
+    public bool wasClicked;
 
     public KeyCode keyToPress;
 
@@ -22,7 +23,9 @@ public class NoteObject : MonoBehaviour
         {
             if (canBePressed)
             {
+                wasClicked = true;
                 gameObject.SetActive(false);
+
 
                 //GameManager.instance.NoteHit();
 
@@ -44,7 +47,6 @@ public class NoteObject : MonoBehaviour
                     GameManager.instance.PerfectHit();
                     Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
                 }
-                
             }
         }
     }
@@ -59,12 +61,16 @@ public class NoteObject : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if(other.tag == "Activator")
+        if (other.tag == "Activator")
         {
-            canBePressed = false;
+            if (!wasClicked)
+            {
+                canBePressed = false;
 
-            GameManager.instance.NoteMissed();
-            Instantiate(missEffect, transform.position, missEffect.transform.rotation);
+                GameManager.instance.NoteMissed();
+                Instantiate(missEffect, transform.position, missEffect.transform.rotation);
+
+            }
         }
     }
 }

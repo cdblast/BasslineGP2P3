@@ -11,6 +11,7 @@ public class BeatScroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //for the tutorial, tempo is 126.4
         beatTempo = beatTempo / 60f;
     }
 
