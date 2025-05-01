@@ -2092,10 +2092,10 @@ MonoBehaviour:
   perfectHits: 0
   missedHits: 0
   resultsScreen: {fileID: 1527700289}
-  percentHitText: {fileID: 286976331}
+  percentHitText: {fileID: 2007610542}
   normalsText: {fileID: 287273079}
   goodsText: {fileID: 470619094}
-  perfectsText: {fileID: 2007610542}
+  perfectsText: {fileID: 286976331}
   missestext: {fileID: 1409645039}
   rankText: {fileID: 1768122334}
   finalScoreText: {fileID: 42860879}
@@ -4280,7 +4280,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1242768578}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1242768576}
+        m_TargetAssemblyTypeName: replay, Assembly-CSharp
+        m_MethodName: LoadSceneByName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1242768578
 MonoBehaviour:
   m_ObjectHideFlags: 0
